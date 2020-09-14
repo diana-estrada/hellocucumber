@@ -41,12 +41,12 @@ public class StepDefinitions {
 //		argumentos.add(number2.toString());
 //		argumentos.add(operacion);
 		
-		ProcessBuilder p = new ProcessBuilder("./calculator2-exe", "12", "13", "a");
+		ProcessBuilder p = new ProcessBuilder("/tmp/workspace/Cobol_Demo/./calculator2-exe", "12", "13", "a");
         System.out.println("Started EXE");
-        String command = "/tmp/workspace/Cobol_Demo/";
+        //String command = "/tmp/workspace/Cobol_Demo/";
         String line = null;
         try {
-        	p.directory(new File(command));
+        	//p.directory(new File(command));
 			BufferedReader reader = new BufferedReader(
                   new InputStreamReader(p.start().getInputStream()));
 			
