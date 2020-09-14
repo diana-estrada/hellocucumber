@@ -43,7 +43,7 @@ public class StepDefinitions {
 		
 		ProcessBuilder p = new ProcessBuilder(argumentos);
         System.out.println("Started EXE");
-        String command = "/tmp/workspace/Cobol_Demo/hellocucumber";
+        String command = "/tmp/workspace/Cobol_Demo";
         String line = null;
         try {
         	p.directory(new File(command));
