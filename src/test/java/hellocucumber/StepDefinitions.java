@@ -37,9 +37,9 @@ public class StepDefinitions {
 	    
 		List<String> argumentos = new ArrayList<String>();
 		argumentos.add("./calculator2-exe");
-		argumentos.add("12 13 'a'");
-		//argumentos.add(number2.toString());
-		//argumentos.add(operacion);
+		argumentos.add(number1.toString());
+		argumentos.add(number2.toString());
+		argumentos.add(operacion);
 		
 		ProcessBuilder p = new ProcessBuilder(argumentos);
         System.out.println("Started EXE");
@@ -51,6 +51,7 @@ public class StepDefinitions {
                   new InputStreamReader(p.start().getInputStream()));
 			
           while ((line = reader.readLine()) != null) {
+        	  System.out.println("RESULT .... "+line);
               assertEquals(double1, new Double(Double.parseDouble(line)));
           }
           reader.close();
