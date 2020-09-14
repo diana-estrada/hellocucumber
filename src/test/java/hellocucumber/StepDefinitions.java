@@ -36,12 +36,12 @@ public class StepDefinitions {
 	public void i_should_be(Double double1) {
 	    
 		List<String> argumentos = new ArrayList<String>();
-		argumentos.add("./calculator2-exe");
-		argumentos.add(number1.toString());
-		argumentos.add(number2.toString());
-		argumentos.add(operacion);
+//		argumentos.add("./calculator2-exe");
+//		argumentos.add(number1.toString());
+//		argumentos.add(number2.toString());
+//		argumentos.add(operacion);
 		
-		ProcessBuilder p = new ProcessBuilder(argumentos);
+		ProcessBuilder p = new ProcessBuilder("./calculator2-exe", "12", "13", "a");
         System.out.println("Started EXE");
         String command = "/tmp/workspace/Cobol_Demo/";
         String line = null;
