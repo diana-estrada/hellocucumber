@@ -36,7 +36,7 @@ public class StepDefinitions {
 	public void i_should_be(Double double1) {
 	    
 		List<String> argumentos = new ArrayList<String>();
-		argumentos.add("./calculator2-exe");
+		argumentos.add("./calculator2-exe 12 12 'a'");
 		argumentos.add(number1.toString());
 		argumentos.add(number2.toString());
 		argumentos.add(operacion);
